@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="css/main.css">
+        <title>Chat</title>
+    </head>
+
+    <body>
+        <h1 id="main-headline">Chat App</h1>
+
+        <main id="app">
+            <section>
+                <h2>Input messages here:</h2>
+                <input id="nickname" v-model="nickname" type="text" placeholder="Nickname?">
+
+                <form>
+                    <label for="message">Something to say?</label>
+                    <textarea @focus="catchTextFocus" v-model="message" id="textarea" class="message"
+                        autocomplete="off"></textarea>
+                    <input @click.prevent="dispatchMessage" type="submit" value="Send">
+                </form>
+            </section>
+
+            <section class="messages">
+                <h2>Receive messages here:</h2>
+                <ul id="messages">
+                    <!-- render a new message component for every message -->
+                    <newmsg v-for="message in messages" :message="message"></newmsg>
+                </ul>
+            </section>
+        </main>
+
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="/js/main.js" type="module" defer></script>
+    </body>
+
+</html>

@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    border: none;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    background-color: #333;
+    color: white;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+}
+
+main section {
+    padding: 1em;
+}
+
+#main-headline {
+    text-align: center;
+    margin-bottom: 0.8em;
+}
+
+label {
+    display: block;
+    padding-bottom: 0.5em;
+}
+
+textarea {
+    width: 90%;
+    height: 200px;
+    border-radius: 0.5em;
+    resize: none;
+}
+
+input[type="submit"] {
+    display: block;
+    margin-top: 1em;
+    padding: 8px 12px;
+    border-radius: 0.5em;
+}
+
+#nickname {
+    padding: 0.5em 1em;
+    border-radius: 0.25em;
+    margin: 0.5em 0 1em 0;
+}
+
+.messages h2 {
+    margin-bottom: 1em;
+}
+
+.chat-messages {
+    width: 45%;
+    border-radius: 1em;
+    padding: 0.5em 1em;
+    background-color: rgba(0, 150, 150, 0.8);
+    margin-bottom: 0.8em;
+    float: left;
+    clear: both;
+}
+
+.other-messages {
+    background-color: rgba(150, 107, 0, 0.8);
+    float: right;
+}
