@@ -1,0 +1,21 @@
+{
+  "name": "perruzzi_g_chatapp",
+  "version": "1.0.0",
+  "description": "chat app with node and express",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app"
+  },
+  "keywords": [
+    "chat",
+    "socket",
+    "node",
+    "express"
+  ],
+  "author": "Giovanni",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "socket.io": "^4.6.0"
+  }
+}
