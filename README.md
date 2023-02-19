@@ -1,6 +1,6 @@
 # Assignment #1 - Chat App With Node, Express, and Vue
 
-I will be using NodeJS, Express and Vue with Socket.io to create a live interactive chat application. I'm also going to include a notification message when a user leaves the chat.
+I will be using NodeJS, Express and Vue with Socket.io to create a live interactive chat application. I'm also going to include a notification message when a user leaves the chat. This is not a fully finished project.
 
 ## Installing and running app
 
