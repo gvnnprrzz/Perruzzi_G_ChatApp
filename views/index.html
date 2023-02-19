@@ -49,6 +49,9 @@
           <!-- render a new message component for every message -->
           <newmsg v-for="message in messages" :message="message"></newmsg>
         </ul>
+        <div id="disconnected" class="alert alert-danger" role="alert" style="display: none;">
+          Someone has disconnected from the chat.
+        </div>
       </section>
     </main>
     <footer id="foot">

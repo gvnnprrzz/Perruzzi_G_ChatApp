@@ -41,4 +41,9 @@ io.on('connection', (socket) => {
 
         io.emit('typing', { currentlytyping: user });
     })
+
+    socket.on('disconnect', () => {
+        console.log("A user has disconnected from the chat");
+        io.emit('user_disconnect', { sID: socket.id, message: 'disconnected' });
+    });
 });
