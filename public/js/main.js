@@ -52,7 +52,24 @@ const vm = createApp({
     components: {
         newmsg: ChatMsg
     }
+
 }).mount('#app')
+
+const disconnectedElement = document.getElementById('disconnected');
+socket.on('user_disconnect', (data) => {
+    console.log(`User ${data.sID} has disconnected.`);
+    disconnectedElement.style.display = 'block';
+});
+
+socket.on('connect', () => {
+    console.log(`Connected: ${socket.id}`);
+    disconnectedElement.style.display = 'none';
+});
+
+socket.on('connect_error', (err) => {
+    console.error(`Connection error: ${err.message}`);
+    disconnectedElement.style.display = 'block';
+});
 
 socket.addEventListener('connected', setUserID);
 socket.addEventListener('new_message', showNewMessage);
