@@ -1,19 +1,6 @@
-@import './modules/_reset';
-@import './modules/_vars';
-
-@import './modules/_chatmessage';
-
-// write some defaults here
-body {
-    font-size: 16px;
-    background-color: #333;
-    color: white;
-
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-main {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 1em;
-}
+@import './modules/_reset.scss';
+@import './modules/_vars.scss';
+@import './modules/_defaults.scss';
+@import './modules/_header.scss';
+@import './modules/_chatmessage.scss';
+@import './modules/_footer.scss';
