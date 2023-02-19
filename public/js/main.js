@@ -42,10 +42,19 @@ const vm = createApp({
         },
 
         catchTextFocus() {
-            // emit a custom typing event and broadcast it to the server
-            socket.emit('user_typing', {
-                name: this.nickname || 'anonymous'
-            })
+            const user = { name: this.nickname || 'anonymous' };
+            socket.emit('user_typing', user);
+            this.handleUserTyping(user);
+        },
+
+        handleUserTyping(user) {
+            const popup = document.createElement('div');
+            popup.textContent = `${user.name} is typing something...`;
+            popup.classList.add('popup');
+            document.body.appendChild(popup);
+            setTimeout(() => {
+                document.body.removeChild(popup);
+            }, 2000);
         }
     },
 
