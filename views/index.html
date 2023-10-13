@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="stylesheet" href="css/main.css">
     <title>Chat</title>
   </head>
@@ -19,7 +18,7 @@
           <img src="images/logo.svg" alt="Chat App logo" class="logo">
         </div>
         <div class="heading">
-          <h1 class="main-headline">Welcome to my Chat App</h1>
+          <h3 class="main-headline">Welcome to my Chat App</h3>
         </div>
         <nav class="main-navigation" aria-label="Main Navigation">
           <ul>
@@ -31,7 +30,7 @@
       </section>
     </header>
     <main id="app">
-      <section>
+      <section class="user-message">
         <h2>Input messages here:</h2>
         <input id="nickname" v-model="nickname" type="text" placeholder="Nickname?">
 
@@ -50,7 +49,7 @@
           <newmsg v-for="message in messages" :message="message"></newmsg>
         </ul>
         <div id="disconnected" class="alert alert-danger" role="alert" style="display: none;">
-          Someone has disconnected from the chat.
+          <strong>Oops!</strong> Someone has disconnected from the chat.
         </div>
       </section>
     </main>
@@ -63,7 +62,6 @@
       </section>
     </footer>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-
     <script src="/socket.io/socket.io.js"></script>
     <script src="/js/main.js" type="module" defer></script>
   </body>

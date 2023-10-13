@@ -1,21 +1,19 @@
 #head {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 20px;
-    align-items: center;
-    height: 200px;
+    padding: 1rem;
+    background-color: #007bff;
+    color: #fff;
 }
 
 .logo-heading-nav {
-    max-width: 1920px;
     height: 200px;
 }
 
-img.logo {
-    margin-left: 100px;
-    margin-top: 30px;
-    width: 250px;
-    height: 100px;
+.logo img {
+    width: 200px;
+    height: auto;
+    margin-right: 10px;
 }
 
 .heading {
@@ -24,9 +22,9 @@ img.logo {
 
 .main-headline {
     grid-column: 2 / span 1;
-    font-size: 36px;
-    margin-top: -1.7em;
+    font-size: 1.5rem;
     font-weight: bold;
+    margin-top: -1.7em;
 }
 
 .main-navigation {
@@ -45,10 +43,10 @@ img.logo {
 }
 
 .main-navigation li {
-    margin-right: 100px;
+    margin-right: 10px;
 }
 
-.main-navigation a {
+.main-navigation a img {
     display: block;
     width: 30px;
     height: 30px;

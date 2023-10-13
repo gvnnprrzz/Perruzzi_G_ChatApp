@@ -54,7 +54,7 @@ const vm = createApp({
             document.body.appendChild(popup);
             setTimeout(() => {
                 document.body.removeChild(popup);
-            }, 2000);
+            }, 10000);
         }
     },
 
