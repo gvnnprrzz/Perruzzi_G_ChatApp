@@ -1,10 +1,8 @@
 #app {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-template-rows: auto 1fr;
-    align-items: center;
-    margin-top: 4.5em;
-    justify-items: center;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    padding: 20px;
 }
 
 section:first-child {
@@ -15,7 +13,6 @@ section:first-child {
 section:last-child {
     grid-column: 1 / span 2;
     grid-row: 1 / span 1;
-    margin-top: 3em;
 }
 
 h2 {
@@ -26,41 +23,94 @@ h2 {
     margin-bottom: 10px;
 }
 
-input[type="text"],
-textarea {
+.user-message,
+.messages {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.user-message input[type="text"],
+.user-message textarea,
+.user-message input[type="submit"] {
     width: 100%;
     padding: 10px;
-    font-size: 1.1rem;
-    border-radius: 5px;
-    border: 1px solid #000;
     margin-bottom: 10px;
-    margin-top: 10px;
-}
-
-input[type="submit"] {
-    padding: 10px 20px;
-    font-size: 1.1rem;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    border: none;
-    background-color: #fff;
-    color: #000;
-    cursor: pointer;
-    border: 1px solid #000;
+    font-size: 1rem;
 }
 
-ul {
+.messages ul {
     list-style: none;
     padding: 0;
-    margin: 0;
+    max-height: 400px;
+    overflow-y: auto;
 }
 
-article p {
-    border: 1px solid #000;
+.chat-messages {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+.chat-messages:nth-child(odd) {
+    background-color: $user-messages;
+}
+
+.chat-messages:nth-child(even) {
+    background-color: $other-messages;
+}
+
+.message-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.message-name {
     font-size: 16px;
-    padding: 5px;
+    font-weight: bold;
+    margin-right: 10px;
 }
 
-.messages {
-    overflow-y: scroll;
-    height: 400px;
+.message-content {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.popup {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    animation: fadeOut 2s ease-in-out;
+}
+
+.popup {
+    font-size: 14px;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #app {
+        grid-template-columns: 1fr;
+    }
 }
