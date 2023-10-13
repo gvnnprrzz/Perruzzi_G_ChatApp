@@ -13,16 +13,12 @@ Follow these steps to install and run the application in your local environment:
 
 Clone the repository:
 
-bash
-
     git clone <Perruzzi_G_ChatApp>
     cd Perruzzi_G_ChatApp
 
 ## Install Dependencies
 
 Navigate to the project directory and install the necessary dependencies using npm or yarn.
-
-bash
 
     npm install
 
@@ -33,8 +29,6 @@ bash
 ## Start the server
 
 Run the Node.js server using the following command:
-
-bash
 
     node app
 
