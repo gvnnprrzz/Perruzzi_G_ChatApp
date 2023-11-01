@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to Assignment #1, a live interactive chat application built with Node.js, Express, and Vue, enhanced with Socket.io. This project includes a feature to display notifications when a user leaves the chat. Please note that this is a basic chat app developed for desktop use as part of a school project. It may not include all the functionalities of a fully-featured live chat application.">
     <link rel="stylesheet" href="css/main.css">
     <title>Chat</title>
   </head>
@@ -51,6 +52,7 @@
         <div id="disconnected" class="alert alert-danger" role="alert" style="display: none;">
           <strong>Oops!</strong> Someone has disconnected from the chat.
         </div>
+        <div class="typing-status">{{ userTypingStatus }}</div>
       </section>
     </main>
     <footer id="foot">

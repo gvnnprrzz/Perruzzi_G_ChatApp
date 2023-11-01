@@ -4,35 +4,39 @@
     padding: 1rem;
     background-color: #007bff;
     color: #fff;
+    text-align: center;
 }
 
 .logo-heading-nav {
-    height: 200px;
+    height: auto;
 }
 
 .logo img {
-    width: 200px;
+    max-width: 100%;
     height: auto;
     margin-right: 10px;
 }
 
 .heading {
     display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
 }
 
 .main-headline {
-    grid-column: 2 / span 1;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: bold;
-    margin-top: -1.7em;
+    margin-top: 0;
+    color: #333;
 }
 
 .main-navigation {
-    grid-column: 3 / 4;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
-    margin-top: -4em;
+    margin-top: 1rem;
 }
 
 .main-navigation ul {
@@ -43,7 +47,7 @@
 }
 
 .main-navigation li {
-    margin-right: 10px;
+    margin-right: 20px;
 }
 
 .main-navigation a img {
@@ -51,4 +55,21 @@
     width: 30px;
     height: 30px;
     background-size: cover;
+}
+
+/* Add responsive design for smaller screens */
+@media (max-width: 768px) {
+    #head {
+        grid-template-columns: 1fr;
+    }
+
+    .main-navigation {
+        flex-direction: column;
+        margin-top: 0;
+    }
+
+    .main-navigation li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
 }

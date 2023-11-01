@@ -25,9 +25,9 @@ h2 {
 
 .user-message,
 .messages {
-    background-color: #fff;
+    background-color: #f5f5f5;
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -50,7 +50,7 @@ h2 {
 }
 
 .chat-messages {
-    background-color: #f0f0f0;
+    background-color: #e2e2e2;
     border-radius: 10px;
     padding: 10px;
     margin: 10px;
@@ -84,7 +84,7 @@ h2 {
     line-height: 1.4;
 }
 
-.popup {
+.typing-status {
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -93,10 +93,17 @@ h2 {
     border-radius: 5px;
     padding: 10px;
     animation: fadeOut 2s ease-in-out;
+    font-size: 14px;
 }
 
-.popup {
+.timestamp {
     font-size: 14px;
+    color: #333;
+    margin-top: 15px;
+    padding: 5px 10px;
+    background-color: #f7f7f7;
+    border-radius: 5px;
+    display: inline-block;
 }
 
 @keyframes fadeOut {
@@ -112,5 +119,10 @@ h2 {
 @media screen and (max-width: 768px) {
     #app {
         grid-template-columns: 1fr;
+    }
+
+    .user-message,
+    .messages {
+        padding: 10px;
     }
 }

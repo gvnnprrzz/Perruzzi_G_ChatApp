@@ -1,6 +1,6 @@
 # Chat App with Node, Express, and Vue
 
-Welcome to Assignment #1, a live interactive chat application built with Node.js, Express, and Vue, enhanced with Socket.io. This project includes a feature to display notifications when a user leaves the chat. Please note that this is a basic chat app designed for desktop use, developed as part of a school project. It may not include all the functionalities of a fully-featured live chat application.
+Welcome to Assignment #1, a live interactive chat application built with Node.js, Express, and Vue, enhanced with Socket.io. This project includes a feature to display notifications when a user leaves the chat. Please note that this is a basic chat app developed for desktop use as part of a school project. It may not include all the functionalities of a fully-featured live chat application.
 
 ## Table of Contents
 
@@ -34,10 +34,10 @@ Run the Node.js server using the following command:
 
 Access the Chat App:
 
-Open a web browser and navigate to <http://localhost:3000> to access the chat application. You can now start chatting with other users in real-time!
+Open a web browser and navigate to <http://localhost:3000> to access the chat application. You can now start chatting with other users in real time!
 
 ## License
 
-This project is licensed under the MIT License, which means you are free to use, modify, and distribute the code as per the terms mentioned in the license.
+This project is licensed under the MIT License, allowing you to use, modify, and distribute the code as per the terms mentioned in the license.
 
-Enjoy chatting with your friends and colleagues in real-time using this application!
+Enjoy chatting with your friends and colleagues in real time using this application!
