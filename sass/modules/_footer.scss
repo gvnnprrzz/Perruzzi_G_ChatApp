@@ -1,11 +1,26 @@
 #foot {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     background-color: #007bff;
     color: #fff;
-    padding: 1rem;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .footer-content {
+    font-size: 16px;
+    max-width: 100%;
     text-align: center;
+}
+
+/* Media Query for smaller screens (e.g., mobile devices) */
+@media screen and (max-width: 768px) {
+    #foot {
+        flex-direction: column;
+    }
+
+    .footer-content {
+        font-size: 14px;
+    }
 }
