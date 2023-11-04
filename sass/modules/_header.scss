@@ -1,45 +1,42 @@
 #head {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    padding: 1rem;
+    padding: 20px;
     background-color: #007bff;
     color: #fff;
 }
 
 .logo-heading-nav {
-    height: 200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    align-items: center;
 }
 
 .logo img {
-    width: 200px;
+    width: 100%;
+    max-width: 200px;
     height: auto;
-    margin-right: 10px;
 }
 
 .heading {
-    display: grid;
+    text-align: center;
+    padding: 1rem;
 }
 
 .main-headline {
-    grid-column: 2 / span 1;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: bold;
-    margin-top: -1.7em;
 }
 
 .main-navigation {
-    grid-column: 3 / 4;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    margin-top: -4em;
 }
 
 .main-navigation ul {
     list-style: none;
-    margin: 0;
-    padding: 0;
     display: flex;
+    justify-content: center;
 }
 
 .main-navigation li {
@@ -48,7 +45,34 @@
 
 .main-navigation a img {
     display: block;
-    width: 30px;
-    height: 30px;
+    max-width: 30px;
     background-size: cover;
+}
+
+/* Add responsive design for smaller screens */
+@media (max-width: 768px) {
+    #head {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .logo-heading-nav {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .logo img {
+        max-width: 150px;
+    }
+
+    .main-navigation {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .main-navigation li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
 }

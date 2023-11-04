@@ -1,6 +1,6 @@
 # Chat App with Node, Express, and Vue
 
-Welcome to Assignment #1, a live interactive chat application built with Node.js, Express, and Vue, enhanced with Socket.io. This project includes a feature to display notifications when a user leaves the chat. Please note that this is a basic chat app designed for desktop use, developed as part of a school project. It may not include all the functionalities of a fully-featured live chat application.
+Welcome to Assignment #1, a live interactive chat application built with Node.js, Express, and Vue, enhanced with Socket.io. This project includes a feature to display notifications when a user leaves the chat. Please note that this is a basic chat app, developed as part of a school project. It may not include all the functionalities of a fully-featured live chat application.
 
 ## Table of Contents
 
